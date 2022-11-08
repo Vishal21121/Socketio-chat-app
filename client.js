@@ -3,12 +3,14 @@ const socket = io('http://localhost:8000');
 socket.emit('connection')
 
 let name = prompt("Enter name")
+document.getElementById('name').innerText = name
+
 socket.emit('user-joined',name)
 
 let messageElement = document.getElementById('message')
 document.getElementById('submit').addEventListener('click', () => {
     let message = messageElement.value;
-    // console.log(value)
+    messageElement.value = ''
     socket.emit('message', message)
     appendElement(message,'right')
 })

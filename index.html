@@ -15,24 +15,26 @@
     <div class="flex">
         <section class="bg-gray-900 overflow-auto flex w-4/12 h-screen">
             <div class="w-full bg-gray-700 h-12">
-                <p class="text-lg font-sans mx-1 my-1 text-white">Name</p>
+                <p class="text-lg font-sans mx-1 my-1 text-white"></p>
             </div>
         </section>
         <main class="w-screen bg-gray-400 max-h-screen">
             <div class="w-full bg-gray-600 h-12">
-                <p class="text-lg font-sans text-white">Name</p>
+                <div>
+                    <p class="text-lg font-sans text-white w-full bg-gray-600 h-12 p-2" id="name">Name</p>
+                </div>
             </div>
             <div class="msg-container overflow-y-auto max-h-[80vh]">
                 <div id="element">
-                    <p class="bg-green-400 mx-12 w-28 max-w-prose text-gray-800 p-2 rounded-lg my-2 float-right clear-both"> a</p>
-                    <p class="bg-green-400 mx-12 w-28 max-w-prose text-gray-800 p-2 rounded-lg my-2 float-left clear-both"> a</p>
+                    <!-- <p class="bg-green-400 mx-12 w-28 max-w-prose text-gray-800 p-2 rounded-lg my-2 float-right clear-both"> a</p>
+                    <p class="bg-green-400 mx-12 w-28 max-w-prose text-gray-800 p-2 rounded-lg my-2 float-left clear-both"> a</p> -->
                 </div>
                 
             </div>
             <div class="send-box absolute top-[677px] box-border">
                 <input class="p-3 w-[67vw] bg-gray-500 box-border focus:outline-none rounded-sm text-white" type="text"
                     name="message" id="message">
-                <button class="bg-blue-500 p-3 w-[105px] box-border text-white relative right-1 hover:bg-blue-600"
+                <button class="bg-blue-500 p-3 w-[105px] box-border text-white relative right-1 hover:bg-blue-600 rounded-md"
                     id="submit">Send</button>
             </div>
         </main>
