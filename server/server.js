@@ -9,10 +9,10 @@ let users = {}
 io.on('connection',socket=>{
     socket.on('user-joined',name =>{
         users[socket.id] = name
-        console.log(name)
     })
-    socket.on('message',(message)=>{
-        socket.broadcast.emit('send',message)
+    socket.on('message',(value)=>{
+        // console.log(value.message)
+        socket.broadcast.emit('send',[value.message,value.name])
         // appendElement(message,'right')
     })
 })
